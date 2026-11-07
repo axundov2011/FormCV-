@@ -1,0 +1,109 @@
+.temperature-card {
+  width: min(100% - 32px, 480px);
+  box-sizing: border-box;
+  margin: 48px auto;
+  padding: 32px;
+  color: #1e293b;
+  text-align: center;
+  background: linear-gradient(145deg, #ffffff, #eff6ff);
+  border: 1px solid #dbeafe;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(30, 64, 175, 0.16);
+}
+
+.temperature-card__icon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 16px;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #f97316, #ef4444);
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(239, 68, 68, 0.28);
+}
+
+.temperature-card h1 {
+  margin: 0;
+  color: #1e3a8a;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.temperature-card__subtitle {
+  margin: 8px 0 26px;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.temperature-card__label {
+  display: grid;
+  gap: 8px;
+  color: #334155;
+  text-align: left;
+  font-weight: 600;
+}
+
+.temperature-card__input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 2px solid #bfdbfe;
+  border-radius: 10px;
+  color: #1e293b;
+  background: #ffffff;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.temperature-card__input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.14);
+}
+
+.temperature-results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.temperature-result {
+  display: grid;
+  gap: 8px;
+  padding: 16px 12px;
+  border-radius: 12px;
+}
+
+.temperature-result span {
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.temperature-result strong {
+  font-size: 1.15rem;
+}
+
+.temperature-result--fahrenheit {
+  color: #9a3412;
+  background: #ffedd5;
+}
+
+.temperature-result--celsius {
+  color: #1e40af;
+  background: #dbeafe;
+}
+
+@media (max-width: 480px) {
+  .temperature-card {
+    padding: 24px 18px;
+  }
+
+  .temperature-results {
+    grid-template-columns: 1fr;
+  }
+}

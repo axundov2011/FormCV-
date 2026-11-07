@@ -12,7 +12,6 @@ const VictoryScreen = ({ result, exp1, exp2, hero, onClose, onRestart }) => {
 
   return (
     <div className={`victory ${modeClass}`}>
-      {/* şüalar və konfeti yalnız Qureyş qalib gəlməyəndə */}
       {!qurayshWon && (
         <>
           <div className="victory-rays" />

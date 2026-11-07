@@ -1,16 +1,27 @@
 import React from 'react'
 import PropTypes from "prop-types";
 
-const Greeting  = () => {
+const Greeting = () => {
+  const [greeting, setGreeting] = React.useState("");
+
+  const hour = new Date().getHours();
+
+ const showGreeting = () => {
+   if (hour < 12) {
+    setGreeting("Good morning");
+  } else if (hour < 18) {
+    setGreeting("Good afternoon");
+  } else {
+    setGreeting("Good evening");
+  }
+ }
   return (
-    <h3 className='text-primary'>
-      Hello, {name}!
-    </h3>
+    <div className="greeting">
+      <button onClick={showGreeting}>Show Greeting</button>
+      <h3>{greeting}</h3>
+    </div>
   )
 }
 
 
-Greeting.PropTypes = {
-    name: PropTypes.string.isRequired,
-}
 export default Greeting 

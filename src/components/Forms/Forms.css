@@ -260,12 +260,16 @@
 }
 
 .cv-table__show {
-  padding: 8px 11px;
+  width: 108px;
+  min-height: 40px;
+  padding: 8px 10px;
   background: #4a86e8;
 }
 
 .cv-table__delete {
-  padding: 8px 11px;
+  width: 108px;
+  min-height: 40px;
+  padding: 8px 10px;
   background: #e05252;
 }
 
